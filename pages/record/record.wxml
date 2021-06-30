@@ -1,0 +1,27 @@
+<!--pages/record/record.wxml-->
+
+<!-- <button bindtap="getData">aasssssa</button> -->
+<!-- <view wx:for="{{dataList}}">
+    <view>{{item.detection_location}}</view>
+    <view>{{item.detection_pic_url}}</view>
+    <view>{{item.detection_time}}</view>
+</view> -->
+
+<!-- <image src="/images/gakki.jpg" mode = "widthFix"></image> -->
+
+<view class="dynamic"> 
+<navigator class="dyItem" wx:for="{{dataList}}" bindtap="dispath">
+    <!-- <view class="pic">   </view> -->
+    <image class="img1" src="{{item.detection_pic_url}}" ></image>
+  
+    <view class="txt">
+      <view class="title">
+            <view>地点：{{item.detection_location}}</view>
+            <!-- <view>图片地址：{{item.detection_pic_url}}</view> -->
+            <view>检测时间：{{item.date}}</view>
+      </view>
+      <view class="info">
+        发起人：王璐瑶 - 时间：{{item.date}}
+      </view>
+    </view>
+  </navigator> </view>

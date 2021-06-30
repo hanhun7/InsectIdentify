@@ -1,0 +1,69 @@
+<view class='page_row' bindtap="suo">
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}"/>
+    </view>
+  </view>
+  <view class='sousuo'>搜索</view>    
+</view>
+<swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{4}}" wx:key>
+    <image src="https://photo.tuchong.com/1360496/f/32138192.jpg" mode='aspectFill'></image>
+  </swiper-item>
+</swiper> 
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx)">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key="_id" bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key="_id" id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <view class='name'> {{item.name}} </view>
+          </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="content">
+            <view class="title">描述</view>
+            <view class="text-gray text-sm flex">
+              <text class="text-cut">
+				<text class="cuIcon-infofill text-red  margin-right-xs"></text> {{item.description}}
+              </text>
+            </view>
+          </view>
+          <view class="content">
+            <view class="title">危害等级</view>
+            <view class="text-gray text-sm flex">
+              <text class="text-cut">
+				<text class="cuIcon-infofill text-red  margin-right-xs"></text> {{item.hazard_rating}}
+              </text>
+            </view>
+          </view>
+          <view class="content">
+            <view class="title">分布</view>
+            <view class="text-gray text-sm flex">
+              <text class="text-cut">
+				<text class="cuIcon-infofill text-red  margin-right-xs"></text> {{item.distribution}}
+              </text>
+            </view>
+          </view>  
+          <view class="content">
+            <view class="title">消除办法</view>
+            <view class="text-gray text-sm flex">
+              <text class="text-cut">
+				<text class="cuIcon-infofill text-red  margin-right-xs"></text> {{item.method}}
+              </text>
+            </view>
+          </view> 
+          <view>
+            <image style="width: 200px; height: 200px;" src="{{item.picture}}" ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view> 
+</view>

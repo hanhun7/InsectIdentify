@@ -1,0 +1,24 @@
+<view class="search">
+  <input class="df_1" placeholder="请输入昆虫名称" value="{{searchValue}}" bindinput="searchValueInput" />
+  <!-- <button class="button" bindtap="searchValueInput">搜索</button> -->
+</view>
+<view class='list'>
+  <block   wx:for='{{list}}' wx:key='list' wx:for-item="item">
+  <view   class="list_item">
+      <!-- <navigator  url='{{item.goods_id}}' bindtap="navigateToPage"  data-name='{{item.goods_title}}' id='{{item.goods_id}}' data-showType='{{item.showType}}'> -->
+      <view class='img'>
+        <image src="{{item.picture}}"  mode="scaleToFill"/>
+      </view>
+      <view  class='info'>
+        <view class ="name">名称：</view><view class="detail">{{item.name}}</view>
+        <view class ="name">详细描述：</view><view class="detail">{{item.description}}</view>
+        <view class="name">分布：</view><view class="detail">{{item.distribution}}</view>
+        <view class="name">危害等级：</view><view class="detail">{{item.hazard_rating}}</view>
+        <view class="name">防治方法：</view><view class="detail">{{item.method}}</view> 
+      </view>
+       <!-- </navigator> -->
+      <view class='clear'></view>
+  </view>
+  </block>
+</view>
+

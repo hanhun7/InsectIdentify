@@ -1,0 +1,52 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.bodyContent {
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:	#AFEEEE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  overflow: hidden;
+}
+
+
+.box{
+  width:120px; 
+  height: 100px; 
+  margin: 100rpx;
+  border-radius: 20px;
+  background:white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.push{
+  width:100px; 
+  height:50px; 
+  margin: 20px;
+  text-align: center;
+  border-radius: 10px;
+}

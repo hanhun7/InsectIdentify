@@ -1,0 +1,10 @@
+<!--index.wxml-->
+
+
+<view class="bodyContent"> 
+  <view>
+      <button class="push"  bindtap="add" plain = "true">上传图片</button>
+    </view>
+</view>
+
+
